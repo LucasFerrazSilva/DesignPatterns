@@ -30,5 +30,10 @@ public class Orcamento {
 	public void add(String item) {
 		this.items.add(item);
 	}
+
+
+	public boolean temItemMaiorQue100Reais() {
+		return this.valor > 100.0;
+	}
 	
 }

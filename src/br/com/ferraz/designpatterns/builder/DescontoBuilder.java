@@ -1,8 +1,7 @@
 package br.com.ferraz.designpatterns.builder;
 
-import br.com.ferraz.designpatterns.model.Desconto;
 import br.com.ferraz.designpatterns.model.Orcamento;
-import br.com.ferraz.designpatterns.model.SemDesconto;
+import br.com.ferraz.designpatterns.model.desconto.Desconto;
 
 public class DescontoBuilder {
 
@@ -24,8 +23,6 @@ public class DescontoBuilder {
 	}
 	
 	public double calcula(Orcamento orcamento) {
-		this.ultimoDesconto.setProximoDesconto(new SemDesconto());
-		
 		return this.primeiroDesconto.calcula(orcamento);
 	}
 	

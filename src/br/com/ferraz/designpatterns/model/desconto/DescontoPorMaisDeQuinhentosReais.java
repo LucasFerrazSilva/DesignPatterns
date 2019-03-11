@@ -1,4 +1,6 @@
-package br.com.ferraz.designpatterns.model;
+package br.com.ferraz.designpatterns.model.desconto;
+
+import br.com.ferraz.designpatterns.model.Orcamento;
 
 public class DescontoPorMaisDeQuinhentosReais extends Desconto {
 

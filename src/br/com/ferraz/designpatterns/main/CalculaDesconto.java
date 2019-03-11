@@ -10,11 +10,11 @@ public class CalculaDesconto {
 	public static void main(String[] args) {
 		CalculadorDeDesconto calculador = new CalculadorDeDesconto();
 		
-		Orcamento orcamento = new Orcamento(400.0);
+		Orcamento orcamento = new Orcamento(4000.0);
 		
-		orcamento.add("Impressora");
+//		orcamento.add("Impressora");
 		
-		for(int i = 0 ; i < 1 ; i++)
+		for(int i = 0 ; i < 10 ; i++)
 			orcamento.add(valueOf(i));
 		
 		System.out.println(calculador.calcula(orcamento));
