@@ -7,6 +7,13 @@ public abstract class Desconto {
 	
 	public abstract double calcula(Orcamento orcamento);
 	
+	protected double calculaProximo(Orcamento orcamento) {
+		if (this.desconto != null)
+			return this.desconto.calcula(orcamento);
+		else 
+			return 0.0;
+	}
+	
 	
 	public Desconto setProximoDesconto(Desconto desconto) {
 		this.desconto = desconto;
