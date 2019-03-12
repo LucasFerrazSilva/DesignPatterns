@@ -3,6 +3,7 @@ package br.com.ferraz.designpatterns.main;
 import br.com.ferraz.designpatterns.model.Orcamento;
 import br.com.ferraz.designpatterns.model.imposto.ICPP;
 import br.com.ferraz.designpatterns.model.imposto.IKCV;
+import br.com.ferraz.designpatterns.model.imposto.Imposto;
 
 public class CalculaImpostos {
 
@@ -10,12 +11,17 @@ public class CalculaImpostos {
 		Orcamento orcamento = new Orcamento(2000);
 
 		
-		ICPP icpp = new ICPP();
+		Imposto icpp = new ICPP();
 		
 		System.out.println(icpp.calcula(orcamento));
 
 		
-		IKCV ikcv = new IKCV();
+		Imposto ikcv = new IKCV();
+		
+		System.out.println(ikcv.calcula(orcamento));
+		
+		
+		ikcv = new IKCV(new ICPP()); //Decorator
 		
 		System.out.println(ikcv.calcula(orcamento));
 	}

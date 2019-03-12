@@ -3,7 +3,14 @@ package br.com.ferraz.designpatterns.model.imposto;
 import br.com.ferraz.designpatterns.model.Orcamento;
 
 public class ICPP extends ImpostoTemplate {
-
+	
+	public ICPP() {}
+	
+	public ICPP(Imposto outroImposto) {
+		super(outroImposto);
+	}
+	
+	
 	@Override
 	protected double taxaMinima(Orcamento orcamento) {
 		return 0.1;

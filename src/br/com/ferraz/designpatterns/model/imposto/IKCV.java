@@ -3,6 +3,13 @@ package br.com.ferraz.designpatterns.model.imposto;
 import br.com.ferraz.designpatterns.model.Orcamento;
 
 public class IKCV extends ImpostoTemplate {
+	
+	public IKCV() {}
+	
+	public IKCV(Imposto outroImposto) {
+		super(outroImposto);
+	}
+	
 
 	@Override
 	protected double taxaMinima(Orcamento orcamento) {
