@@ -1,10 +1,10 @@
 package br.com.ferraz.designpatterns.service;
 
 import br.com.ferraz.designpatterns.builder.DescontoBuilder;
-import br.com.ferraz.designpatterns.model.Orcamento;
 import br.com.ferraz.designpatterns.model.desconto.DescontoPorCincoItens;
 import br.com.ferraz.designpatterns.model.desconto.DescontoPorMaisDeQuinhentosReais;
 import br.com.ferraz.designpatterns.model.desconto.DescontoPorProdutoPoucoVendido;
+import br.com.ferraz.designpatterns.model.orcamento.Orcamento;
 
 public class CalculadorDeDesconto {
 

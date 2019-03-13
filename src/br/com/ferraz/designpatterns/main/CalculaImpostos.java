@@ -1,9 +1,9 @@
 package br.com.ferraz.designpatterns.main;
 
-import br.com.ferraz.designpatterns.model.Orcamento;
 import br.com.ferraz.designpatterns.model.imposto.ICPP;
 import br.com.ferraz.designpatterns.model.imposto.IKCV;
 import br.com.ferraz.designpatterns.model.imposto.Imposto;
+import br.com.ferraz.designpatterns.model.orcamento.Orcamento;
 
 public class CalculaImpostos {
 

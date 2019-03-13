@@ -1,6 +1,6 @@
 package br.com.ferraz.designpatterns.model.imposto;
 
-import br.com.ferraz.designpatterns.model.Orcamento;
+import br.com.ferraz.designpatterns.model.orcamento.Orcamento;
 
 public class IKCV extends ImpostoTemplate {
 	

@@ -1,7 +1,7 @@
 package br.com.ferraz.designpatterns.builder;
 
-import br.com.ferraz.designpatterns.model.Orcamento;
 import br.com.ferraz.designpatterns.model.desconto.Desconto;
+import br.com.ferraz.designpatterns.model.orcamento.Orcamento;
 
 public class DescontoBuilder {
 
