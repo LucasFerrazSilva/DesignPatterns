@@ -6,6 +6,8 @@ import java.util.List;
 
 import br.com.ferraz.designpatterns.model.notafiscal.ItemDaNota;
 import br.com.ferraz.designpatterns.model.notafiscal.NotaFiscal;
+import br.com.ferraz.designpatterns.observer.notafiscal.EnviaNotaFiscalPorEmailObserver;
+import br.com.ferraz.designpatterns.observer.notafiscal.NotaFiscalObserver;
 
 public class NotaFiscalBuilder {
 
@@ -16,6 +18,7 @@ public class NotaFiscalBuilder {
 	private List<ItemDaNota> itens = new ArrayList<>();
 	private String observacoes;
 	private Calendar dataEmissao;
+	private List<NotaFiscalObserver> observers = new ArrayList<>();
 
 	
 	public NotaFiscalBuilder paraEmpresa(String razaoSocial) {
@@ -51,7 +54,19 @@ public class NotaFiscalBuilder {
 	}
 	
 	public NotaFiscal constroi() {
-		return new NotaFiscal(razaoSocial, cnpj, dataEmissao, valorBruto, impostos, observacoes, itens);
+		NotaFiscal notaFiscal = new NotaFiscal(razaoSocial, cnpj, dataEmissao, valorBruto, impostos, observacoes, itens);
+		
+		for(NotaFiscalObserver observer : observers) {
+			observer.executa(notaFiscal);
+		}
+		
+		return notaFiscal;
+	}
+
+	public NotaFiscalBuilder comObserver(EnviaNotaFiscalPorEmailObserver observer) {
+		this.observers.add(observer);
+		
+		return this;
 	}
 	
 }
